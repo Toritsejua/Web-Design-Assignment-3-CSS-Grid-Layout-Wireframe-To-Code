@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+.border {
+  border: 1px solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "logo    promo1  promo1  promo1"
+    "logo    promo1  promo1  promo1"
+    "home    home    home    home"
+    "promo2  promo2  promo2  promo2"
+    "product product product product"
+    "product product product product"
+    "product product product product"
+    "main-nav news news promo3"
+    "main-nav news news promo3"
+    "main-nav news news promo4"
+    "main-nav news news promo4"
+    "main-nav care care  promo5"
+    "promo6   care care  promo5"
+    "legal    legal legal legal";
+  grid-auto-rows: minmax(50px, auto);
+}
+.logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.promo1 {
+  grid-area: promo1;
+}
+.home {
+  grid-area: home;
+}
+.promo2 {
+  grid-area: promo2;
+}
+.product {
+  grid-area: product;
+}
+.main-nav {
+  grid-area: main-nav;
+}
+.news {
+  grid-area: news;
+}
+.promo3 {
+  grid-area: promo3;
+}
+.promo4 {
+  grid-area: promo4;
+}
+.promo6 {
+  grid-area: promo6;
+}
+.care {
+  grid-area: care;
+}
+.promo5 {
+  grid-area: promo5;
+}
+.legal {
+  grid-area: legal;
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "logo"
+      "logo"
+      "main-nav"
+      "main-nav"
+      "promo1"
+      "promo1"
+      "home"
+      "promo2"
+      "product"
+      "product"
+      "product"
+      "news"
+      "news"
+      "promo3"
+      "promo4"
+      "promo6"
+      "care"
+      "care"
+      "promo5"
+      "legal";
+  }
+}
